@@ -17,18 +17,18 @@ const config: Config = {
           200: "#C4C4CC",
           300: "#2D2D2D",
           500: "#7C7C8A",
-          
+
           800: "#202024",
           900: "#121214",
         },
-      
+
         googleColor: "#DC4B38",
       },
-      fontFamily:{
-        inter:['Inter', 'sans-serif']
-      }
+      fontFamily: {
+        inter: ["Inter", "sans-serif"],
+      },
     },
   },
-  plugins: [require("@tailwindcss/forms")],
+  plugins: [require("@tailwindcss/forms"), require("autoprefixer")],
 };
 export default config;
