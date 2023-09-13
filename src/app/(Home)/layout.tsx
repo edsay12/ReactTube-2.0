@@ -1,7 +1,6 @@
 "use client";
-import "./globals.css";
+
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 
 import { useEffect, useState } from "react";
 
@@ -41,8 +40,20 @@ export default function RootLayout({
   }, []);
 
   return (
-    <html lang="en">
-      <body className="bg-gray-900">{children}</body>
-    </html>
+    <>
+      <Sidebar showNav={showNav} isMobile={isMobile} />
+      <TopBar setShowNav={setShowNav} showNav={showNav} />
+
+      {/* conteudo aqui */}
+
+      <main
+        className={`pt-24 w-full pl-28  text-white duration-300 transition-all 
+              ${showNav && !isMobile ? "pl-[350px]" : ""} 
+            
+              `}
+      >
+        <div className="bg-red-100 pr-4">{children}</div>
+      </main>
+    </>
   );
 }

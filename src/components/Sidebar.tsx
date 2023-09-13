@@ -5,13 +5,14 @@ import { AiFillHeart, AiFillHome } from "react-icons/ai";
 import { BsFillPlayFill, BsFillStopwatchFill } from "react-icons/bs";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { RiLogoutBoxRFill } from "react-icons/ri";
+import Image from "next/image";
 
 type PropTypes = {
   showNav: boolean;
-  isMobile:boolean
+  isMobile: boolean;
 };
 
-function Sidebar({ showNav,isMobile }:PropTypes) {
+function Sidebar({ showNav, isMobile }: PropTypes) {
   const [subMenuOpen, setSubMenuOpen] = useState(false);
 
   return (
@@ -25,7 +26,11 @@ function Sidebar({ showNav,isMobile }:PropTypes) {
           <div className="icon text-cian-800 text-3xl">
             <FaReact />
           </div>
-          <p className={`text-white transition-all text-xl duration-300  ${showNav ? "scale-100" : "scale-0 hidden"}`}>
+          <p
+            className={`text-white transition-all text-xl duration-300  ${
+              showNav ? "scale-100" : "scale-0 hidden"
+            }`}
+          >
             React<span className="text-cian-300">Tube</span>
           </p>
         </div>
@@ -64,35 +69,43 @@ function Sidebar({ showNav,isMobile }:PropTypes) {
             <div className="text-gray-400 ">Inscrições</div>
             <div className="space-y-4 mt-5">
               <div className=" flex text-gray-400 items-center gap-5 hover:bg-gray-800 p-2 rounded-xl cursor-pointer">
-                <img
-                  src="/img/user.jpg"
-                  className="rounded-full w-6 h-6 border-cian-500 border-2"
-                  alt=""
-                />
+                <picture>
+                  <img
+                    src="/img/user.jpg"
+                    className="rounded-full w-6 h-6 border-cian-500 border-2"
+                    alt=""
+                  />
+                </picture>
                 <span>Davi</span>
               </div>
               <div className=" flex text-gray-400 items-center gap-5 hover:bg-gray-800 p-2 rounded-xl cursor-pointer">
-                <img
-                  src="/img/user.jpg"
-                  className="rounded-full w-6 h-6 border-cian-500 border-2"
-                  alt=""
-                />
+                <picture>
+                  <img
+                    src="/img/user.jpg"
+                    className="rounded-full w-6 h-6 border-cian-500 border-2"
+                    alt=""
+                  />
+                </picture>
                 <span>Davi</span>
               </div>
               <div className=" flex text-gray-400 items-center gap-5 hover:bg-gray-800 p-2 rounded-xl cursor-pointer">
-                <img
-                  src="/img/user.jpg"
-                  className="rounded-full w-6 h-6 border-cian-500 border-2"
-                  alt=""
-                />
+                <picture>
+                  <img
+                    src="/img/user.jpg"
+                    className="rounded-full w-6 h-6 border-cian-500 border-2"
+                    alt=""
+                  />
+                </picture>
                 <span>Davi</span>
               </div>
               <div className=" flex text-gray-400 items-center gap-5 hover:bg-gray-800 p-2 rounded-xl cursor-pointer">
-                <img
-                  src="/img/user.jpg"
-                  className="rounded-full w-6 h-6 border-cian-500 border-2"
-                  alt=""
-                />
+                <picture>
+                  <img
+                    src="/img/user.jpg"
+                    className="rounded-full w-6 h-6 border-cian-500 border-2"
+                    alt=""
+                  />
+                </picture>
                 <span>Davi</span>
               </div>
             </div>

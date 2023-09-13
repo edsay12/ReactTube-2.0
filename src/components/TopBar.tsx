@@ -41,11 +41,13 @@ function TopBar({ setShowNav, showNav = true }: propTypes) {
               </div>
             </div>
             <div>
-              <img
-                src="/img/user.jpg"
-                className="rounded-full w-9 h-9 border-cian-500 border-2 cursor-pointer "
-                alt=""
-              />
+              <picture>
+                <img
+                  src="/img/user.jpg"
+                  className="rounded-full w-9 h-9 border-cian-500 border-2 cursor-pointer "
+                  alt=""
+                />
+              </picture>
             </div>
           </div>
         </div>
