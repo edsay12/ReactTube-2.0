@@ -12,6 +12,7 @@ const config: Config = {
         cian: {
           500: "#0085FF",
           800: "#61DAFB",
+          300: "#9BE1F8",
         },
         gray: {
           200: "#C4C4CC",
@@ -29,6 +30,7 @@ const config: Config = {
       },
     },
   },
-  plugins: [require("@tailwindcss/forms"), require("autoprefixer")],
+  plugins: [require("@tailwindcss/forms"), require("autoprefixer"),require('tailwind-scrollbar')({ nocompatible: true })],
 };
 export default config;
+
