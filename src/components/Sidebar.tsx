@@ -5,7 +5,6 @@ import { AiFillHeart, AiFillHome } from "react-icons/ai";
 import { BsFillPlayFill, BsFillStopwatchFill } from "react-icons/bs";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { RiLogoutBoxRFill } from "react-icons/ri";
-import Image from "next/image";
 
 type PropTypes = {
   showNav: boolean;
@@ -44,19 +43,19 @@ function Sidebar({ showNav, isMobile }: PropTypes) {
             />
             <ActiveLink
               text="Favoritos"
-              to="/Favoritos"
+              to="/favorites"
               ico={<AiFillHeart />}
               isNavOppen={showNav}
             />
             <ActiveLink
               text="Historico"
-              to="/Historico"
+              to="/historic"
               ico={<BsFillStopwatchFill />}
               isNavOppen={showNav}
             />
             <ActiveLink
               text="Assistir mais tarde"
-              to="/Assistirdepois"
+              to="/watchlater"
               ico={<BsFillPlayFill />}
               isNavOppen={showNav}
             />
