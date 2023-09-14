@@ -12,12 +12,12 @@ function TopBar({ setShowNav, showNav = true }: propTypes) {
   return (
     <>
       <div
-        className={`fixed flex flex-col  w-full top-0
+        className={`fixed flex flex-col  w-full top-0 z-10
             `}
       >
         <div
           className={`w-full h-24 bg-gray-900 px-5 pl-28 pt-5 text-gray-400 flex justify-between items-center transition-all duration-300  ${
-            showNav ? "pl-[350px]" : ""
+            showNav ? "pl-[320px]" : ""
           } `}
         >
           <div

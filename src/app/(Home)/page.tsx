@@ -25,6 +25,10 @@ export default function Home() {
   return (
     <>
       <div className="bg-blue-200">home</div>
+      <img
+        src="https://images.pexels.com/photos/147411/italy-mountains-dawn-daybreak-147411.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        alt=""
+      />
     </>
   );
 }

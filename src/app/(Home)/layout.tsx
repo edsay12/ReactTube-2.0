@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 
 import Sidebar from "@/components/Sidebar";
 import TopBar from "@/components/TopBar";
+import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -47,12 +48,75 @@ export default function RootLayout({
       {/* conteudo aqui */}
 
       <main
-        className={`pt-24 w-full pl-28  text-white duration-300 transition-all 
-              ${showNav && !isMobile ? "pl-[350px]" : ""} 
+        className={`pt-32 w-full pl-28   text-white duration-300 transition-all 
+              ${showNav && !isMobile ? "pl-[320px]" : ""} 
             
               `}
       >
-        <div className="bg-red-100 pr-4">{children}</div>
+        <div className="w-full flex  flex-col gap-5">
+          <div className="pr-4 ">
+          <div className="  relative overflow-hidden ">
+            <ul className="flex gap-6 ">
+              <li className="text-white rounded-2xl hover:opacity-80 cursor-pointer bg-gray-800 px-7 py-4">
+                Element
+              </li>
+              <li className="text-white rounded-2xl hover:opacity-80 cursor-pointer bg-gray-800 px-7 py-4">
+                Element
+              </li>
+              <li className="text-white rounded-2xl hover:opacity-80 cursor-pointer bg-gray-800 px-7 py-4">
+                Element
+              </li>
+              <li className="text-white rounded-2xl hover:opacity-80 cursor-pointer bg-gray-800 px-7 py-4">
+                Element
+              </li>
+              <li className="text-white rounded-2xl hover:opacity-80 cursor-pointer bg-gray-800 px-7 py-4">
+                Element
+              </li>
+              <li className="text-white rounded-2xl hover:opacity-80 cursor-pointer bg-gray-800 px-7 py-4">
+                Element
+              </li>
+              <li className="text-white rounded-2xl hover:opacity-80 cursor-pointer bg-gray-800 px-7 py-4">
+                Element
+              </li>
+              <li className="text-white rounded-2xl hover:opacity-80 cursor-pointer bg-gray-800 px-7 py-4">
+                Element
+              </li>
+              <li className="text-white rounded-2xl hover:opacity-80 cursor-pointer bg-gray-800 px-7 py-4">
+                Element
+              </li>
+              <li className="text-white rounded-2xl hover:opacity-80 cursor-pointer bg-gray-800 px-7 py-4">
+                Element
+              </li>
+              <li className="text-white rounded-2xl hover:opacity-80 cursor-pointer bg-gray-800 px-7 py-4">
+                Element
+              </li>
+              <li className="text-white rounded-2xl hover:opacity-80 cursor-pointer bg-gray-800 px-7 py-4">
+                Element
+              </li>
+              <li className="text-white rounded-2xl hover:opacity-80 cursor-pointer bg-gray-800 px-7 py-4">
+                Element
+              </li>
+              <li className="text-white rounded-2xl hover:opacity-80 cursor-pointer bg-gray-800 px-7 py-4">
+                Element
+              </li>
+            </ul>
+
+            {/* controles */}
+            {/* <div className="absolute top-0 -left-0 bg-gray-900 px-1 rounded h-full hover:bg-gray-500 text-white flex justify-center items-center cursor-pointer">
+              <MdKeyboardArrowLeft />
+            </div> */}
+            <div className="absolute top-0 right-0 bg-gray-900 px-1 rounded h-full hover:bg-gray-500 text-white flex justify-center items-center cursor-pointer">
+              <MdKeyboardArrowRight />
+            </div>
+          </div>
+
+
+          </div>
+         
+          <div className=" w-full">
+          {children}
+          </div>
+        </div>
       </main>
     </>
   );
