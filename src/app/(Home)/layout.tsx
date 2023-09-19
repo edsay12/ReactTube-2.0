@@ -31,12 +31,28 @@ export default function RootLayout({
     }
   };
 
+  const slideLeft = ()=> {
+    var slide = document.getElementById('slideRef') /// usar um ref aqui 
+    console.log('opa')
+    if(!slide) return
+
+    slide.scrollLeft = slide.scrollLeft - 200
+  }
+  const slideRight = ()=> {
+    var slide = document.getElementById('slideRef') /// usar um ref aqui 
+
+    if(!slide) return
+
+    slide.scrollLeft = slide.scrollLeft + 200
+  }
+
+
   useEffect(() => {
     if (typeof window != undefined) {
       window.addEventListener("resize", handdleSize);
     }
     return () => {
-      removeEventListener("resize", handdleSize);
+      removeEventListener("resize", handdleSize); // CleanerUp
     };
   }, []);
 
@@ -53,69 +69,63 @@ export default function RootLayout({
             
               `}
       >
-        <div className="w-full flex  flex-col gap-5">
-          <div className="pr-4 ">
-          <div className="  relative overflow-hidden ">
-            <ul className="flex gap-6 ">
-              <li className="text-white rounded-2xl hover:opacity-80 cursor-pointer bg-gray-800 px-7 py-4">
-                Element
-              </li>
-              <li className="text-white rounded-2xl hover:opacity-80 cursor-pointer bg-gray-800 px-7 py-4">
-                Element
-              </li>
-              <li className="text-white rounded-2xl hover:opacity-80 cursor-pointer bg-gray-800 px-7 py-4">
-                Element
-              </li>
-              <li className="text-white rounded-2xl hover:opacity-80 cursor-pointer bg-gray-800 px-7 py-4">
-                Element
-              </li>
-              <li className="text-white rounded-2xl hover:opacity-80 cursor-pointer bg-gray-800 px-7 py-4">
-                Element
-              </li>
-              <li className="text-white rounded-2xl hover:opacity-80 cursor-pointer bg-gray-800 px-7 py-4">
-                Element
-              </li>
-              <li className="text-white rounded-2xl hover:opacity-80 cursor-pointer bg-gray-800 px-7 py-4">
-                Element
-              </li>
-              <li className="text-white rounded-2xl hover:opacity-80 cursor-pointer bg-gray-800 px-7 py-4">
-                Element
-              </li>
-              <li className="text-white rounded-2xl hover:opacity-80 cursor-pointer bg-gray-800 px-7 py-4">
-                Element
-              </li>
-              <li className="text-white rounded-2xl hover:opacity-80 cursor-pointer bg-gray-800 px-7 py-4">
-                Element
-              </li>
-              <li className="text-white rounded-2xl hover:opacity-80 cursor-pointer bg-gray-800 px-7 py-4">
-                Element
-              </li>
-              <li className="text-white rounded-2xl hover:opacity-80 cursor-pointer bg-gray-800 px-7 py-4">
-                Element
-              </li>
-              <li className="text-white rounded-2xl hover:opacity-80 cursor-pointer bg-gray-800 px-7 py-4">
-                Element
-              </li>
-              <li className="text-white rounded-2xl hover:opacity-80 cursor-pointer bg-gray-800 px-7 py-4">
-                Element
-              </li>
-            </ul>
-
-            {/* controles */}
-            {/* <div className="absolute top-0 -left-0 bg-gray-900 px-1 rounded h-full hover:bg-gray-500 text-white flex justify-center items-center cursor-pointer">
+        <div className="w-full h-full flex  flex-col gap-5">
+          <div className="pr-4 h-full flex pr-11 ">
+            <div onClick={slideLeft} className=" h-full py-5 bg-gray-900  rounded  hover:bg-gray-500 text-white  cursor-pointer">
               <MdKeyboardArrowLeft />
-            </div> */}
-            <div className="absolute top-0 right-0 bg-gray-900 px-1 rounded h-full hover:bg-gray-500 text-white flex justify-center items-center cursor-pointer">
+            </div>
+            <div id='slideRef' className="relative overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-none">
+              <ul className="flex gap-6 ">
+                <li className="text-white rounded-2xl hover:opacity-80  cursor-pointer bg-gray-800 px-7 py-4">
+                  Element
+                </li>
+                <li className="text-white rounded-2xl hover:opacity-80 cursor-pointer bg-gray-800 px-7 py-4">
+                  Element
+                </li>
+                <li className="text-white rounded-2xl hover:opacity-80 cursor-pointer bg-gray-800 px-7 py-4">
+                  Element
+                </li>
+                <li className="text-white rounded-2xl hover:opacity-80 cursor-pointer bg-gray-800 px-7 py-4">
+                  Element
+                </li>
+                <li className="text-white rounded-2xl hover:opacity-80 cursor-pointer bg-gray-800 px-7 py-4">
+                  Element
+                </li>
+                <li className="text-white rounded-2xl hover:opacity-80 cursor-pointer bg-gray-800 px-7 py-4">
+                  Element
+                </li>
+                <li className="text-white rounded-2xl hover:opacity-80 cursor-pointer bg-gray-800 px-7 py-4">
+                  Element
+                </li>
+                <li className="text-white rounded-2xl hover:opacity-80 cursor-pointer bg-gray-800 px-7 py-4">
+                  Element
+                </li>
+                <li className="text-white rounded-2xl hover:opacity-80 cursor-pointer bg-gray-800 px-7 py-4">
+                  Element
+                </li>
+                <li className="text-white rounded-2xl hover:opacity-80 cursor-pointer bg-gray-800 px-7 py-4">
+                  Element
+                </li>
+                <li className="text-white rounded-2xl hover:opacity-80 cursor-pointer bg-gray-800 px-7 py-4">
+                  Element
+                </li>
+                <li className="text-white rounded-2xl hover:opacity-80 cursor-pointer bg-gray-800 px-7 py-4">
+                  Element
+                </li>
+                <li className="text-white rounded-2xl hover:opacity-80 cursor-pointer bg-gray-800 px-7 py-4">
+                  Element
+                </li>
+                <li className="text-white rounded-2xl hover:opacity-80 cursor-pointer bg-gray-800 px-7 py-4">
+                  Element
+                </li>
+              </ul>
+            </div>
+            <div onClick={slideRight} className="h-full py-5 bg-gray-900  rounded  hover:bg-gray-500 text-white  cursor-pointer">
               <MdKeyboardArrowRight />
             </div>
           </div>
 
-
-          </div>
-         
-          <div className=" w-full">
-          {children}
-          </div>
+          <div className=" w-full">{children}</div>
         </div>
       </main>
     </>

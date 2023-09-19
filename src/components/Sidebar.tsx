@@ -110,7 +110,7 @@ function Sidebar({ showNav, isMobile }: PropTypes) {
             </div>
 
             <div
-              className="mt-10 cursor-pointer flex items-center text-gray-400  gap-5 "
+              className={`cursor-pointer flex items-center text-gray-400  gap-5 ${subMenuOpen ? 'mt-10' :'mt-5 '} transition-all duration-300 `}
               onClick={() => setSubMenuOpen((menu) => !menu)}
             >
               {/* <MdKeyboardArrowUp/> */}
@@ -127,7 +127,7 @@ function Sidebar({ showNav, isMobile }: PropTypes) {
         </div>
 
         {/* //logout */}
-        <div className="  flex flex-col justify-end justify-self-end h-full ">
+        <div className="  flex flex-col justify-end justify-self-end h-full cursor-pointer">
           <div className=" flex items-center p-2 rounded-xl gap-5 text-gray-400 font-normal hover:bg-gray-800">
             <div className="text-2xl">
               <RiLogoutBoxRFill />
