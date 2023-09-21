@@ -70,7 +70,7 @@ export default function RootLayout({
               `}
       >
         <div className="w-full h-full flex  flex-col gap-5">
-          <div className="pr-4 h-full flex pr-11 ">
+          <div className=" h-full flex pr-11 ">
             <div onClick={slideLeft} className=" h-full py-5 bg-gray-900  rounded  hover:bg-gray-500 text-white  cursor-pointer">
               <MdKeyboardArrowLeft />
             </div>

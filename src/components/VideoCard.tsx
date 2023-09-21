@@ -1,6 +1,7 @@
 import { AiFillEye } from "react-icons/ai";
 import { GrFormView, GrView } from "react-icons/gr";
 
+
 type PropTypes = {
   videoUrl: string;
   videoTitle: string;
@@ -16,11 +17,16 @@ function VideoCard({
   videoUserName = "",
   userImageUrl = "",
   videoId,
-  userId
+  userId,
 }: PropTypes) {
+  
+
   return (
     <>
-      <a href={`video/${videoId}`} className="block w-full  min-w-md cursor-pointer">
+      <a
+        href={`video/${videoId}`}
+        className="block w-full p-10  cursor-pointer"
+      >
         <div id="cardtop" className="rounded-lg overflow-hidden">
           <video src={videoUrl}></video>
         </div>
@@ -34,8 +40,13 @@ function VideoCard({
               />
             </picture>
             <div>
-              <h3 className="text-gray-200 text-md text-ellipsis overflow-hidden w-52  whitespace-nowrap">{videoTitle}</h3>
-              <a className="text-gray-400 text-md hover:text-white" href={`user/${userId}`}>
+              <h3 className="text-gray-200 text-md text-ellipsis overflow-hidden w-52  whitespace-nowrap">
+                {videoTitle}
+              </h3>
+              <a
+                className="text-gray-400 text-md hover:text-white"
+                href={`user/${userId}`}
+              >
                 {videoUserName}
               </a>
             </div>
