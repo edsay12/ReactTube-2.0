@@ -6,9 +6,9 @@ type PropTypes = {
   borderColor?: string;
   ico?: React.ReactNode;
   bgColor?: "bg-gray-800" | "bg-gray-300";
-} & InputHTMLAttributes<HTMLInputElement>;
+} & InputHTMLAttributes<HTMLTextAreaElement>;
 
-const Input = forwardRef<HTMLInputElement, PropTypes>(
+const TextArea = forwardRef<HTMLTextAreaElement, PropTypes>(
   (
     {
       name = "",
@@ -33,11 +33,10 @@ const Input = forwardRef<HTMLInputElement, PropTypes>(
           } focus-within:border-cyan-500  placeholder:text-gray-400 w-full flex gap-2  ${bgColor} p-3 rounded items-center `}
         >
           {ico && ico}
-          <input
+          <textarea
             className="text-sm w-full p-0  appearance-none outline-none bg-transparent border-none focus:ring-0 "
             name={name}
             id={inputId}
-            type={type}
             ref={ref}
             {...rest}
           />
@@ -48,5 +47,5 @@ const Input = forwardRef<HTMLInputElement, PropTypes>(
     );
   }
 );
-Input.displayName = "Input";
-export { Input };
+TextArea.displayName = "Input";
+export { TextArea };

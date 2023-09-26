@@ -5,10 +5,10 @@ import VideoCard from "@/components/VideoCard";
 function Favorites() {
   return (
     <>
-    <div className="flex flex-col gap-5 mt-5 pr-11">
-      Favoritos
-      <Line/>
-    </div>
+      <div className="flex flex-col gap-5 mt-5 pr-11">
+        Favoritos
+        <Line />
+      </div>
       <div className="grid min-[900px]:grid-cols-1 min-[1000px]:grid-cols-2  xl:grid-cols-3  pr-11 mt-5">
         <VideoCard
           userId="1"
