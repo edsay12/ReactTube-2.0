@@ -1,7 +1,8 @@
 "use client";
 import Button from "@/components/Button";
+import VideoWatchLaterCard from "@/components/VideoWatchLaterCard";
 import { useState } from "react";
-import { TbFilterDown, TbFilterUp } from "react-icons/tb";
+import { TbFilterDown, TbFilterUp, TbPointFilled } from "react-icons/tb";
 
 function WatchLater() {
   const [isDesc, setIsDesc] = useState(false);
@@ -27,45 +28,12 @@ function WatchLater() {
 
         <span className="text-xl">Ordenar</span>
       </div>
-      <div className="grid w-full grid-cols-1 lg:grid-cols-4 gap-5 mt-5 mb-5">
-        <div className="lg:max-w-sm w-full rounded-lg  ">
-          <video src="/videodeteste.mp4 " />
-        </div>
-        <div className="w-full lg:col-span-3">
-          <h2 className="text-xl">Titulo do video</h2>
-          <p className="text-gray-400">
-            <a href="">Dev Junior alves</a>
-            <span>* 1,1 mil visualizações</span>
-            <span>* 1,1 mil há 7 dias</span>
-          </p>
-        </div>
-      </div>
-      <div className="grid w-full grid-cols-1 lg:grid-cols-4 gap-5 mt-5 mb-5">
-        <div className="lg:max-w-sm w-full rounded-lg  ">
-          <video src="/videodeteste.mp4 " />
-        </div>
-        <div className="w-full lg:col-span-3">
-          <h2 className="text-xl">Titulo do video</h2>
-          <p className="text-gray-400">
-            <a href="">Dev Junior alves</a>
-            <span>* 1,1 mil visualizações</span>
-            <span>* 1,1 mil há 7 dias</span>
-          </p>
-        </div>
-      </div>
-      <div className="grid w-full grid-cols-1 lg:grid-cols-4 gap-5 mt-5 mb-5">
-        <div className="lg:max-w-sm w-full rounded-lg  ">
-          <video src="/videodeteste.mp4 " />
-        </div>
-        <div className="w-full lg:col-span-3">
-          <h2 className="text-xl">Titulo do video</h2>
-          <p className="text-gray-400">
-            <a href="">Dev Junior alves</a>
-            <span>* 1,1 mil visualizações</span>
-            <span>* 1,1 mil há 7 dias</span>
-          </p>
-        </div>
-      </div>
+
+      <VideoWatchLaterCard/>
+      <VideoWatchLaterCard/>
+      <VideoWatchLaterCard/>
+
+      
     </div>
   );
 }

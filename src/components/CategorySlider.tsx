@@ -2,7 +2,7 @@ import { LegacyRef, useRef } from "react";
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 
 function CategorySlider() {
-    const slideRef = useRef<HTMLDivElement | undefined>(null);
+    const slideRef = useRef<HTMLDivElement | null>(null);
   const slideLeft = () => {
     /// usar um ref aqui
   
