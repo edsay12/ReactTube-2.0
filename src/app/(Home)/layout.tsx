@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import Sidebar from "@/components/Sidebar";
 import TopBar from "@/components/TopBar";
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
+import CategorySlider from "@/components/CategorySlider";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -31,20 +32,7 @@ export default function RootLayout({
     }
   };
 
-  const slideLeft = ()=> {
-    var slide = document.getElementById('slideRef') /// usar um ref aqui 
-    console.log('opa')
-    if(!slide) return
-
-    slide.scrollLeft = slide.scrollLeft - 200
-  }
-  const slideRight = ()=> {
-    var slide = document.getElementById('slideRef') /// usar um ref aqui 
-
-    if(!slide) return
-
-    slide.scrollLeft = slide.scrollLeft + 200
-  }
+  
 
 
   useEffect(() => {
@@ -70,60 +58,8 @@ export default function RootLayout({
               `}
       >
         <div className="w-full h-full flex  flex-col gap-5">
-          <div className=" h-full flex pr-11 ">
-            <div onClick={slideLeft} className=" h-full py-5 bg-gray-900  rounded  hover:bg-gray-500 text-white  cursor-pointer">
-              <MdKeyboardArrowLeft />
-            </div>
-            <div id='slideRef' className="relative overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-none">
-              <ul className="flex gap-6 ">
-                <li className="text-white rounded-2xl hover:opacity-80  cursor-pointer bg-gray-800 px-7 py-4">
-                  Element
-                </li>
-                <li className="text-white rounded-2xl hover:opacity-80 cursor-pointer bg-gray-800 px-7 py-4">
-                  Element
-                </li>
-                <li className="text-white rounded-2xl hover:opacity-80 cursor-pointer bg-gray-800 px-7 py-4">
-                  Element
-                </li>
-                <li className="text-white rounded-2xl hover:opacity-80 cursor-pointer bg-gray-800 px-7 py-4">
-                  Element
-                </li>
-                <li className="text-white rounded-2xl hover:opacity-80 cursor-pointer bg-gray-800 px-7 py-4">
-                  Element
-                </li>
-                <li className="text-white rounded-2xl hover:opacity-80 cursor-pointer bg-gray-800 px-7 py-4">
-                  Element
-                </li>
-                <li className="text-white rounded-2xl hover:opacity-80 cursor-pointer bg-gray-800 px-7 py-4">
-                  Element
-                </li>
-                <li className="text-white rounded-2xl hover:opacity-80 cursor-pointer bg-gray-800 px-7 py-4">
-                  Element
-                </li>
-                <li className="text-white rounded-2xl hover:opacity-80 cursor-pointer bg-gray-800 px-7 py-4">
-                  Element
-                </li>
-                <li className="text-white rounded-2xl hover:opacity-80 cursor-pointer bg-gray-800 px-7 py-4">
-                  Element
-                </li>
-                <li className="text-white rounded-2xl hover:opacity-80 cursor-pointer bg-gray-800 px-7 py-4">
-                  Element
-                </li>
-                <li className="text-white rounded-2xl hover:opacity-80 cursor-pointer bg-gray-800 px-7 py-4">
-                  Element
-                </li>
-                <li className="text-white rounded-2xl hover:opacity-80 cursor-pointer bg-gray-800 px-7 py-4">
-                  Element
-                </li>
-                <li className="text-white rounded-2xl hover:opacity-80 cursor-pointer bg-gray-800 px-7 py-4">
-                  Element
-                </li>
-              </ul>
-            </div>
-            <div onClick={slideRight} className="h-full py-5 bg-gray-900  rounded  hover:bg-gray-500 text-white  cursor-pointer">
-              <MdKeyboardArrowRight />
-            </div>
-          </div>
+          <CategorySlider/>
+          
 
           <div className=" w-full">{children}</div>
         </div>

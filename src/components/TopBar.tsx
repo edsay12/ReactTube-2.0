@@ -134,7 +134,7 @@ function TopBar({ setShowNav, showNav = true }: propTypes) {
                             <span className="font-semibold text-gray-900 dark:text-white">
                               Jese Leos
                             </span>
-                            : "Hey, what's up? All set for the presentation?"
+                            : Hey, whats up? All set for the presentation?
                           </div>
                           <div className="text-xs text-blue-600 dark:text-blue-500">
                             a few moments ago
