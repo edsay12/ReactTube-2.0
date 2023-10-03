@@ -28,12 +28,11 @@ function WatchLater() {
 
         <span className="text-xl">Ordenar</span>
       </div>
-
-      <VideoWatchLaterCard/>
-      <VideoWatchLaterCard/>
-      <VideoWatchLaterCard/>
-
-      
+      <div>
+        <VideoWatchLaterCard />
+        <VideoWatchLaterCard />
+        <VideoWatchLaterCard />
+      </div>
     </div>
   );
 }

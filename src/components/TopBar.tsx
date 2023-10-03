@@ -188,7 +188,7 @@ function TopBar({ setShowNav, showNav = true }: propTypes) {
                     <li className="flex text-gray-200 items-center px-4 py-2 gap-2 hover:bg-gray-600">
                       <AiOutlineVideoCameraAdd />
 
-                      <a href="#" className="block ">
+                      <a href="/user/addVideo" className="block ">
                         Novo video
                       </a>
                     </li>

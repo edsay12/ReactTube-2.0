@@ -74,7 +74,9 @@ function AddVideo() {
                         <p>
                           Araste e solte ou
                           <span className="text-blue-800 hover:opacity-80 cursor-pointer">
-                            escolha um video
+                            {" "}
+                            Clique
+                            {" "}
                           </span>
                           para fazer upload
                         </p>
