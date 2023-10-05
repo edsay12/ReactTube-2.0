@@ -28,6 +28,10 @@ const config: Config = {
       fontFamily: {
         inter: ["Inter", "sans-serif"],
       },
+      backgroundImage: {
+        'defaultChannelBg': "url('/img/hero-pattern.svg')",
+        'footer-texture': "url('/img/footer-texture.png')",
+       }
     },
   },
   plugins: [require("@tailwindcss/forms"), require("autoprefixer"),require('tailwind-scrollbar')({ nocompatible: true })],
