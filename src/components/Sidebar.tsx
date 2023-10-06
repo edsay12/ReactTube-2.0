@@ -17,7 +17,7 @@ function Sidebar({ showNav, isMobile }: PropTypes) {
   return (
     <>
       <div
-        className={`sidebar fixed z-40 bg-gray-900 top-0   flex flex-col hover:overflow-y-auto overflow-x-hidden scrollbar-thin scrollbar-track-rounded-full scrollbar-w-11 scrollbar-track-transparent  scrollbar-thumb-gray-800 h-screen p-5 pt-5 duration-300 ${
+        className={`sidebar fixed z-[100] bg-gray-900 top-0   flex flex-col hover:overflow-y-auto overflow-x-hidden scrollbar-thin scrollbar-track-rounded-full scrollbar-w-11 scrollbar-track-transparent  scrollbar-thumb-gray-800 h-screen p-5 pt-5 duration-300 ${
           showNav && !isMobile ? "w-72" : "w-20"
         } ${showNav && isMobile ? "w-72" : "w-20"}`}
       >

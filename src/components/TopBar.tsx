@@ -41,7 +41,7 @@ function TopBar({ setShowNav, showNav = true }: propTypes) {
   return (
     <>
       <div
-        className={`fixed flex flex-col  w-full top-0 z-10 
+        className={`fixed flex flex-col  w-full top-0 z-50
             `}
       >
         <div
